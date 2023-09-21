@@ -5,7 +5,8 @@ h1,
 h2,
 h3,
 p,
-ul {
+ul,
+address {
     margin: 0;
     padding: 0;
 }
@@ -27,3 +28,5 @@ ul {
 @import 'blocks/catalog';
 @import 'blocks/testimonials';
 @import 'blocks/testimonials-list';
+@import 'blocks/footer';
+
