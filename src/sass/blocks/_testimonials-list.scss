@@ -1,0 +1,40 @@
+.testimonials-list {
+
+    &__item {
+        display: flex;
+        gap: 62px;
+    }
+    &__img {
+        width: 169px;
+        height: 169px;
+    }
+    &__description {
+        display: flex;
+        flex-direction: column;
+        gap: 18пшппппппппpx;
+        line-height: 130%;
+    }
+    &__person {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__name {
+        font-size: 18px;
+        font-weight: 900;
+        color: #0d0d0d;
+    }
+    &__marathons-quantity {
+        font-size: 14px;
+        font-weight: 300;
+        color: #646464;
+    }
+    &__feedback {
+        display: flex;
+        flex-direction: column;
+        gap: 23px;
+        font-size: 16px;
+        font-weight: 500;
+        color: #0d0d0d;
+    }
+}
