@@ -1,7 +1,10 @@
 $(document).ready(function(){
+
+
+    /// Карусель Slic
+
     $('.carousel__inner').slick({
         speed: 1200,
-        // adaptiveHeight: true,
         prevArrow: '<button type="button" class="slick-prev"><img src="img/left_arrow.png"></img></button>',
         nextArrow: '<button type="button" class="slick-next"><img src="img/right_arrow.png"></img></button>',
         responsive: [
@@ -14,6 +17,10 @@ $(document).ready(function(){
             }
         ]
     });
+
+
+
+    /// Табы
 
     $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function() {
         $(this)
@@ -29,6 +36,10 @@ $(document).ready(function(){
         })
     });
 
+
+
+    /// Кнопка переключения содержимого карточек
+
     function toggleSlide(item) {
         $(item).each(function(i) {
             $(this).on('click', function(e) {
@@ -42,7 +53,8 @@ $(document).ready(function(){
     toggleSlide('.catalog-item__link');
     toggleSlide('.catalog-item__back');
 
-    // Modal
+
+    // Модальные окна
 
     $('[data-modal=consultation]').on('click', function() {
         $('.overlay, #consultation').fadeIn('slow');
@@ -56,6 +68,36 @@ $(document).ready(function(){
             $('.overlay, #order').fadeIn('slow');
         });
     });
+
+
+
+    // Валидация форм плагином jqueryvalidation.org
+
+    
+    function validateForms(form) {
+        $(form).validate({
+            rules: {
+                name: "required",
+                phone: "required",
+                email: {
+                    required: true,
+                    email: true
+                }
+            },
+            messages: {
+                name: "Пожалуйста, введите свое имя",
+                phone: "Пожалуйста, введите номер телефона",
+                email: {
+                  required: "Пожалуйста, введите свою почту",
+                  email: "Неправильно введен адрес почты"
+                }
+            }
+        });
+    };
+
+    validateForms('#consultation-form');
+    validateForms('#consultation form');
+    validateForms('#order form');
 });
 
 
