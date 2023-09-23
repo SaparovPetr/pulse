@@ -98,6 +98,11 @@ $(document).ready(function(){
     validateForms('#consultation-form');
     validateForms('#consultation form');
     validateForms('#order form');
+
+        // Маска телефонного номера плагином https://plugins.jquery.com/maskedinput
+
+    $('input[name=phone]').mask("+7 (999) 999-9999");
+
 });
 
 
