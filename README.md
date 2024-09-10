@@ -1,2 +1,4 @@
-Link to GitHub Pages: 
+# Простой Интернет-магазин с использованием сторонних скриптов.
+
+## Публикация:
 https://saparovpetr.github.io/pulse/
